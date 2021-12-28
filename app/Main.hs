@@ -9,4 +9,4 @@ import Chapter6
 import Chapter7
 
 main :: IO ()
-main = someFunc
+main = putStrLn (show (Chapter1.generatePairFilter 5 3))
