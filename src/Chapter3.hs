@@ -31,3 +31,17 @@ filter' f (x : xs)
   | f x = x : filter' f xs
   | otherwise = filter' f xs
 
+msort :: [Int] -> [Int]
+msort [] = []
+msort [x] = [x]
+msort xs = merge (msort left) (msort right)
+  where
+    merge :: [Int] -> [Int] -> [Int]
+    merge [] b = b
+    merge a [] = a
+    merge (a : as) (b : bs)
+      | a < b = a : merge as (b : bs)
+      | otherwise = b : merge (a : as) bs
+    left = take halfIndex xs
+    right = drop halfIndex xs
+    halfIndex = length xs `div` 2
