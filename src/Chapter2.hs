@@ -66,3 +66,4 @@ elem' x (y : ys)
 qsort :: [Int] -> [Int]
 qsort [] = []
 qsort (pivot : list) = qsort [a | a <- list, a < pivot] ++ [pivot] ++ qsort [a | a <- list, a >= pivot]
+
