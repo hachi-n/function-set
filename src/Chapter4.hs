@@ -25,4 +25,4 @@ sum'' xs = foldl (+) 0 xs
 --mapr f = foldr (\x acc -> f x : acc) []
 --mapl f = foldl (\acc x -> acc ++ [f x]) []
 
-oddSquareSum = sum (takeWhile (< 10000) (filter odd [1 ..]))
+--oddSquareSum = sum (takeWhile (< 10000) (filter odd [1 ..]))
